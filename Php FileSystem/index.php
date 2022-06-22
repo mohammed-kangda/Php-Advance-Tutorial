@@ -81,6 +81,30 @@
     fclose() -> close file
 
 
+    Is Functions: used for testing files and in if condition -> true/false
+
+    is_dir() -> check folder exists
+
+    is_file() -> check file exists or not .ext required
+
+    is_readable() -> check weather file is readable
+
+    is_writable()
+
+    is_writeable() -> check we can write in file or not
+
+    is_executable() -> checks weather .exe file means software setup file
+
+
+    file_put_contents(filename,data,mode,context(Extra info)) -> does task of fopen,fwrite,fclose
+    
+    mode: if mode is not use then it will remove old data of file
+    
+    FILE_APPEND -> put our new content after the old content
+    LOCK_EX -> lock the file until all the tasks of writing in file is completed / prov. security
+
+    file_get_contents(filename,include_path,context,start,max_length) -> does task of fopen,fread,fclose 
+
 -->
 
 <?php
@@ -274,4 +298,60 @@
     echo "<h2>fclose()</h2><br>";
     fclose($file);
 
+
+    # == #
+    echo "<h2>is_file()</h2><br>";
+    if(is_file('readme.txt')){   # check files with .ext only
+        echo "File Exists";
+    }else{
+        echo "File Doesn't Exists";
+    }
+
+
+    # == #
+    echo "<h2>is_dir()</h2><br>";
+    if(is_dir('floder')){   # check files without .ext only
+        echo "Folder Exists";
+    }else{
+        echo "Folder Doesn't Exists";
+    }
+
+
+    
+    # == #
+    echo "<h2>is_writeable()</h2><br>";
+    if(is_writeable('readme.txt')){  
+        echo "Is Writeable";
+    }else{
+        echo "Is Not Writable";
+    }
+
+
+    # == #
+    echo "<h2>is_readable()</h2><br>";
+    if(is_writeable('readme.txt')){  
+        echo "Is readable";
+    }else{
+        echo "Is Not readable";
+    }
+
+
+    # == #
+    echo "<h2>is_executable()</h2><br>";
+    if(is_executable('readme.txt')){  # checks .exe file only
+        echo "Is executable";
+    }else{
+        echo "Is not executable";
+    }
+
+
+    # == #
+    echo "<h2>file_put_contents()</h2><br>";
+    echo file_put_contents('readme.txt',' This is TXT content using file_put_content',FILE_APPEND | LOCK_EX);
+
+    
+    # == #
+    echo "<h2>file_get_contents()</h2><br>";
+    echo file_get_contents('readme.txt',FALSE,NULL,11,22);
+    
 ?>

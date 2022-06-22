@@ -1,1 +1,1 @@
-Some new c
+Some new c This is TXT content using file_put_content
