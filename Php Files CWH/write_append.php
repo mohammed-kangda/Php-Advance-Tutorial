@@ -12,11 +12,11 @@ fclose($fptr);
 
 // Appending to a file in PHP(overwrites):
 
-$fptr = fopen('myfile2.txt','a');
-fwrite($fptr , 'A1 line  ');
-fwrite($fptr , 'A2 line  ');
-fwrite($fptr , 'A3 line  ');
-fwrite($fptr , 'A4 line  ');
-fwrite($fptr , 'A5 line  ');
-fclose($fptr);
+// $fptr = fopen('myfile2.txt','a');
+// fwrite($fptr , 'A1 line  ');
+// fwrite($fptr , 'A2 line  ');
+// fwrite($fptr , 'A3 line  ');
+// fwrite($fptr , 'A4 line  ');
+// fwrite($fptr , 'A5 line  ');
+// fclose($fptr);
 ?>
