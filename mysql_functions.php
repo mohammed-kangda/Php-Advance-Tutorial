@@ -182,7 +182,7 @@
     
     
     /* -------Check SQL Command error with ERROR Number etc-------*/
-     $sql = "SELECT * FROMs students";
+     $sql = "SELECT * FROM students";
     
     $result = mysqli_query($conn, $sql);
     print_r(mysqli_error_list($conn));
