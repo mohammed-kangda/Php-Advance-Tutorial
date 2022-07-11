@@ -11,6 +11,9 @@
     PDO::FETCH_BOTH
     PDO::FETCH_OBJ
 
+    mysqli_fetch_assoc() is known fetch() in PDO
+
+
 -->
 
 <?php 
